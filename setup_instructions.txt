@@ -1,0 +1,37 @@
+IMPORTANT: SETTING UP YOUR PAPAL NEWS MONITOR BOT
+==================================================
+
+I've detected an issue with your Telegram bot configuration. Follow these steps to fix it:
+
+1. OPEN TELEGRAM AND START YOUR BOT:
+   - Search for "@pope_pump_bot" in Telegram
+   - Start a chat with your bot
+   - Send any message (e.g., "/start" or "hello")
+   
+   This is crucial because Telegram bots can only send messages to users who have started a 
+   conversation with them first.
+
+2. GET YOUR CORRECT CHAT ID:
+   - Search for "@userinfobot" in Telegram
+   - Start a chat and send any message
+   - It will reply with your user ID (e.g., "Your id: 123456789")
+   
+3. UPDATE YOUR .ENV FILE:
+   - Edit the .env file: nano .env
+   - Update the TELEGRAM_CHAT_IDS value with your actual chat ID
+   - Save and exit: Ctrl+O, Enter, Ctrl+X
+
+4. TEST THE BOT AGAIN:
+   - Run: /Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8 test_telegram.py
+   - You should receive a test message in Telegram
+
+5. RUN THE FULL BOT:
+   - Once the test is successful, run:
+   - /Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8 papal_news_monitor.py
+
+ADDITIONAL NOTES:
+- The bot is using Python 3.8, not your default Python environment
+- Always use the full path to Python 3.8 to run the scripts
+- If you want to run this on Render.com, you'll need to update your environment variables there
+
+Good luck! Your bot should work properly after completing these steps. 

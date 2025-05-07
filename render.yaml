@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: papal-news-monitor
+    env: python
+    plan: starter # Choose an appropriate plan for your needs
+    buildCommand: pip install -r requirements.txt
+    startCommand: python papal_news_monitor.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false # This means it will be set manually in the Render dashboard
+      - key: TELEGRAM_CHAT_IDS
+        sync: false
+      - key: SCAN_INTERVAL
+        value: '60' # 1 minute in seconds
+    autoDeploy: true 
